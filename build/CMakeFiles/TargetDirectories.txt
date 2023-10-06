@@ -1,3 +1,0 @@
-/mnt/c/Users/placi/Desktop/LeetCode/build/CMakeFiles/main.dir
-/mnt/c/Users/placi/Desktop/LeetCode/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/placi/Desktop/LeetCode/build/CMakeFiles/rebuild_cache.dir
