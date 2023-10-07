@@ -4,7 +4,7 @@
 
 /*
 Link:
-    https://leetcode.com/problems/contains-duplicate/submissions/
+    https://leetcode.com/problems/contains-duplicate
 */
 class Solution
 {
