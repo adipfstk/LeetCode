@@ -28,8 +28,11 @@ public:
 
 int main()
 {
+
     Solution sol;
     std::string a = "jwtucoucmdfwxxqnxzkaxoglszmfrcvjoiunqqausaxxaaijyqdqgvdnqcaihwilqkpivenpnekioyqujrdrovqrlxovcucjqzjsxmllfgndfprctxvxwlzjtciqxgsxfwhmuzqvlksyuztoetyjugmswfjtawwaqmwyxmvo";
-    std::cout << sol.checkIfPangram(a);
-    std::cout << a.size();
+    time_t start = time(&start);
+    sol.checkIfPangram(a);
+    time_t end = time(&end);
+    cout << end - start << " seconds";
 }
