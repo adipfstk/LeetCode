@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.20)
 project(LeetCode)
 
-add_executable(main ReverseVowels.cpp)
+add_executable(main GoodPairs.cpp)
