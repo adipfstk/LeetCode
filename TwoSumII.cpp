@@ -1,10 +1,15 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+/*
+Link:
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted
+*/
 class Solution
 {
 public:
-    vector<int> twoSum(vector<int> &&numbers, int target)
+    vector<int> twoSum(vector<int> &numbers, int target)
     {
         int left = 0;
         int right = numbers.size() - 1;
@@ -28,14 +33,3 @@ public:
         return {};
     }
 };
-
-int main()
-{
-    Solution sol;
-
-    auto vec = sol.twoSum({2, 7, 11, 15}, 22);
-    for (const auto &x : vec)
-    {
-        std::cout << x << " ";
-    }
-}
