@@ -5,7 +5,6 @@ class Solution
 public:
     int mySqrt(int x)
     {
-
         int ls = 0;
         int ld = x / 2;
         int max = -999;
@@ -15,7 +14,7 @@ public:
         while (ls <= ld)
         {
             int mij = (ls + ld) / 2;
-            int num = mij + 1;
+            long long num = mij + 1;
             if (num * num > x)
             {
                 ld = mij - 1;
