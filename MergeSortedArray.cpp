@@ -1,32 +1,49 @@
 #include <iostream>
+#include <string>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
 /*
 Link:
-https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+https://leetcode.com/problems/merge-sorted-array/description/
 */
-
 class Solution
 {
 public:
     void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
     {
-        for (int i = m; i < nums1.size(); i++)
-        {
-            nums1[i] = nums2[nums1.size() - i - 1];
-        }
+        int last = m + n - 1;
+        n = n - 1;
+        m = m - 1;
 
-        std::sort(nums1.begin(), nums1.end());
+        while (n >= 0)
+        {
+            if (m >= 0 && nums1[m] > nums2[n])
+            {
+                nums1[last] = nums1[m];
+                m--;
+            }
+            else
+            {
+                nums1[last] = nums2[n];
+                n--;
+            }
+            last--;
+        }
     }
 };
+
 int main()
 {
-    vector<int> nums1{1, 2, 3, 0, 0, 0};
-    vector<int> nums2{2, 5, 6};
     Solution sol;
-    sol.merge(nums1, 3, nums2, 3);
+    vector<int> nums1 = {1, 2, 3, 0, 0, 0, 0};
+
+    int m = 3;
+    vector<int> nums2 = {2, 2, 5, 6};
+    int n = 3;
+
+    sol.merge(nums1, m, nums2, n);
+
     for (const auto &x : nums1)
     {
         std::cout << x << " ";
